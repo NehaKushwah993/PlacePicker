@@ -14,8 +14,6 @@
 bin/
 gen/
 app/src/main/jnilibs/
-ooVooPlugin/libs/
-ooVooPlugin/obj/
 
 # Gradle files
 .gradle/

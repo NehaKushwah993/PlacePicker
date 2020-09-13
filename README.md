@@ -1,4 +1,6 @@
 # PlacePicker
+( PlaceSearch and PlacePicker )
+
 Allows user to pick a place using "Map" or "Search".
 
 ![Place Picker Demo](demoFIles/demo.gif)

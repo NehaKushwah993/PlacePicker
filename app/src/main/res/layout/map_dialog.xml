@@ -8,8 +8,12 @@
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
@@ -45,41 +49,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <RelativeLayout
-        android:id="@+id/bottom_layout"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:background="#2196F3"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/ok_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/map_selected_location_text" />
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Select"
+        android:layout_marginBottom="5dp"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/ok_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="Done"
-            android:textAllCaps="false"
-            android:textColor="#3F51B5" />
 
-        <TextView
-            android:id="@+id/map_selected_location_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toStartOf="@id/ok_button"
-            android:layout_toLeftOf="@id/ok_button"
-            android:ellipsize="end"
-            android:ems="10"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:maxLines="2"
-            tools:text="Location" />
-
-    </RelativeLayout>
-
+    <TextView
+        android:id="@+id/map_selected_location_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:ems="10"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingTop="5dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/ok_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

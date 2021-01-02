@@ -37,6 +37,7 @@ import com.google.android.libraries.places.api.model.TypeFilter
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.neharmv.placepicker.R
+import com.neharmv.placepicker.mapPicker.permission.OnPermissionInterface
 import com.neharmv.placepicker.mapPicker.permission.PermissionManagerUtil
 import kotlinx.android.synthetic.main.map_dialog.*
 import java.util.*
@@ -99,7 +100,7 @@ class MapDialogFragment : DialogFragment(), LocationSource, LocationListener {
         try {
             PermissionManagerUtil.requestLocationPermission(
                 true,
-                object : PermissionManagerUtil.OnPermissionInterface {
+                object : OnPermissionInterface {
                     @SuppressLint("MissingPermission")
                     override fun onPermissionGranted() {
                         if (googleMap == null) {
